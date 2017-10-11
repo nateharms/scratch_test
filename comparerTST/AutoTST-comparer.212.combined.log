@@ -1,0 +1,127 @@
+comparerTST.py:41 <module> INFO RUNNING WITH JOB NUMBER i = 212
+comparerTST.py:45 <module> INFO Loading RMG Database ...
+comparerTST.py:48 <module> INFO /home/harms.n/Code/RMG-database/input
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from CBS_QB3_1dHR.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from primaryThermoLibrary.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from KlippensteinH2O2.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:774 loadGroups INFO Loading thermodynamics group database from /home/harms.n/Code/RMG-database/input/thermo/groups...
+transport.py:294 loadGroups INFO Loading transport group database from /home/harms.n/Code/RMG-database/input/transport/groups...
+database.py:165 loadFamilies INFO Loading the user-specified kinetics families from /home/harms.n/Code/RMG-database/input/kinetics/families
+statmech.py:526 loadGroups INFO Loading frequencies group database from /home/harms.n/Code/RMG-database/input/statmech/groups...
+comparerTST.py:57 <module> INFO RMG Database Loaded
+comparerTST.py:81 <module> INFO generateReactionsFromFamilies successfuly performed
+comparerTST.py:141 performCalcs INFO chemkinRxn: Reaction(reactants=[Molecule(SMILES="[CH2]C(=C)C"), Molecule(SMILES="OO")], products=[Molecule(SMILES="C=C(C)C"), Molecule(SMILES="[O]O")], degeneracy=2, pairs=[[Molecule(SMILES="[CH2]C(=C)C"), Molecule(SMILES="C=C(C)C")], [Molecule(SMILES="OO"), Molecule(SMILES="[O]O")]])
+comparerTST.py:143 performCalcs INFO Ensuring resonance isomers have been generated
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+[Molecule(SMILES="[CH2]C(=C)C"), Molecule(SMILES="OO")]
+[Molecule(SMILES="C=C(C)C"), Molecule(SMILES="[O]O")]
+comparerTST.py:162 performCalcs INFO Generated one reaction:
+comparerTST.py:163 performCalcs INFO [Reaction(reactants=[Molecule(SMILES="[CH2]C(=C)C"), Molecule(SMILES="OO")], products=[Molecule(SMILES="C=C(C)C"), Molecule(SMILES="[O]O")], degeneracy=2, pairs=[[Molecule(SMILES="[CH2]C(=C)C"), Molecule(SMILES="C=C(C)C")], [Molecule(SMILES="OO"), Molecule(SMILES="[O]O")]])]
+comparerTST.py:172 performCalcs INFO The reaction of interest is as follows: 
+comparerTST.py:173 performCalcs INFO <Molecule "[CH2]C(=C)C"> + <Molecule "OO"> <=> <Molecule "C=C(C)C"> + <Molecule "[O]O">
+comparerTST.py:175 performCalcs INFO asserting that the testReaction is Isomorphic
+comparerTST.py:177 performCalcs INFO reaction: Reaction(reactants=[Molecule(SMILES="[CH2]C(=C)C"), Molecule(SMILES="OO")], products=[Molecule(SMILES="C=C(C)C"), Molecule(SMILES="[O]O")], degeneracy=2, pairs=[[Molecule(SMILES="[CH2]C(=C)C"), Molecule(SMILES="C=C(C)C")], [Molecule(SMILES="OO"), Molecule(SMILES="[O]O")]])
+comparerTST.py:183 performCalcs INFO Labeling reactant atoms
+comparerTST.py:193 performCalcs INFO Labeling product atoms
+comparerTST.py:209 performCalcs INFO We have generated a H_Abstraction reaction that matches, and used it to label the atoms.
+comparerTST.py:211 performCalcs INFO Calculating reaction kinetics
+comparerTST.py:119 calculate INFO Calculating reaction rate for <Molecule "[CH2]C(=C)C"> + <Molecule "OO"> <=> <Molecule "C=C(C)C"> + <Molecule "[O]O">
+comparerTST.py:121 calculate INFO Selecting the appropriate TS distance database for family 'H_Abstraction'
+comparerTST.py:123 calculate INFO Calculating kinetic data by calling qmCalc.getKineticData
+reaction.py:619 loadKineticsData INFO Kinetics results file /gss_gpfs_scratch/harms.n/QMfiles/OO+[CH2]C(=C)C_C=C(C)C+[O]O.kinetics does not exist or is invalid
+reaction.py:520 generateTSGeometryDirectGuess INFO Generating a TS geometry via the direct guess method
+reaction.py:300 generateBoundsMatrix INFO Generating bounds matrix for OO.[CH2]C(=C)C
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.537141 to 2.477507
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.65 to 3.16393613735
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.15 to 2.730193
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.4 to 2.35059379488
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.4 to 2.35059379488
+reaction.py:561 generateTSGeometryDirectGuess INFO TS estimate made. About to try the search...
+reaction.py:426 optimizeTS INFO Starting optimization steps of the TS search.
+gaussian.py:535 optEstimate INFO Running loose optimization of TS with frozen center
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/OO+[CH2]C(=C)C_C=C(C)C+[O]OEst.gjf
+gaussian.py:590 optRxnCenter INFO Optimization of TS reaction center distances
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/OO+[CH2]C(=C)C_C=C(C)C+[O]ORxnC.gjf
+reaction.py:443 optimizeTS INFO Optimizing TS attempt 1
+gaussian.py:485 createInputFile INFO Creating input file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/OO+[CH2]C(=C)C_C=C(C)C+[O]O.log
+gaussian.py:516 createIRCFile INFO Creating IRC file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/OO+[CH2]C(=C)C_C=C(C)C+[O]OIRC.gjf
+gaussian.py:685 runIRC INFO Running IRC
+gaussian.py:843 verifyIRCOutputFile INFO Verifying the IRC output file /gss_gpfs_scratch/harms.n/QMscratch/OO+[CH2]C(=C)C_C=C(C)C+[O]OIRC.log
+gaussian.py:878 verifyIRCOutputFile INFO Checking if all the success keywords are found in the file.
+reaction.py:570 saveTSData INFO Saving TS result file /gss_gpfs_scratch/harms.n/QMfiles/OO+[CH2]C(=C)C_C=C(C)C+[O]O.ts
+gaussian.py:991 parse INFO Parsing the gaussian output /gss_gpfs_scratch/harms.n/QMscratch/OO+[CH2]C(=C)C_C=C(C)C+[O]O.log
+gaussian.py:111 verifyOutputFile INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/LJXPWUAAAAXJBX-UHFFFAOYSA-u1.log does not exist.
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 1 of 36 on molecule [CH2]C(=C)C.
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/LJXPWUAAAAXJBX-UHFFFAOYSA-u1.log
+gaussian.py:278 generateQMData INFO Attempt 1 of 36 on species InChI=1S/C4H7/c1-4(2)3/h1-2H2,3H3/u1 succeeded.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/LJXPWUAAAAXJBX-UHFFFAOYSA-u1.symm
+symmetry.py:188 parse INFO Point group: C1
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/MHAJPDPJQMAIIY-UHFFFAOYSA.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/MHAJPDPJQMAIIY-UHFFFAOYSA.symm
+symmetry.py:188 parse INFO Point group: C2
+gaussian.py:111 verifyOutputFile INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/VQTUBCCKSQIDNK-UHFFFAOYSA.log does not exist.
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 1 of 36 on molecule C=C(C)C.
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/VQTUBCCKSQIDNK-UHFFFAOYSA.log
+gaussian.py:278 generateQMData INFO Attempt 1 of 36 on species InChI=1S/C4H8/c1-4(2)3/h1H2,2-3H3 succeeded.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/VQTUBCCKSQIDNK-UHFFFAOYSA.symm
+symmetry.py:188 parse INFO Point group: C2v
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/OUUQCZGPVNCOIJ-UHFFFAOYSA-u2.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/OUUQCZGPVNCOIJ-UHFFFAOYSA-u2.symm
+symmetry.py:188 parse INFO Point group: Cs
+CanTherm execution initiated at Wed Aug  2 23:54:17 2017
+
+###############################################################
+#                                                             #
+#                          CanTherm                           #
+#                                                             #
+#   Version: 0.1.0 (14 May 2009)                              #
+#   Authors: RMG Developers (rmg_dev@mit.edu)                 #
+#   P.I.:    William H. Green (whgreen@mit.edu)               #
+#   Website: http://rmg.sourceforge.net/                      #
+#                                                             #
+###############################################################
+
+Loading species LJXPWUAAAAXJBX-UHFFFAOYSA-u1...
+Loading species MHAJPDPJQMAIIY-UHFFFAOYSA...
+Loading species VQTUBCCKSQIDNK-UHFFFAOYSA...
+Loading species OUUQCZGPVNCOIJ-UHFFFAOYSA-u2...
+Loading transition state TS...
+Loading reaction OO+[CH2]C(=C)C_C=C(C)C+[O]O...
+
+
+Loading statistical mechanics parameters for LJXPWUAAAAXJBX-UHFFFAOYSA-u1...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for LJXPWUAAAAXJBX-UHFFFAOYSA-u1...
+Loading statistical mechanics parameters for MHAJPDPJQMAIIY-UHFFFAOYSA...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for MHAJPDPJQMAIIY-UHFFFAOYSA...
+Loading statistical mechanics parameters for VQTUBCCKSQIDNK-UHFFFAOYSA...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for VQTUBCCKSQIDNK-UHFFFAOYSA...
+Loading statistical mechanics parameters for OUUQCZGPVNCOIJ-UHFFFAOYSA-u2...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for OUUQCZGPVNCOIJ-UHFFFAOYSA-u2...
+Loading statistical mechanics parameters for TS...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for TS...
+Generating Arrhenius kinetics model for Arrhenius...
+Saving kinetics for LJXPWUAAAAXJBX-UHFFFAOYSA-u1 + MHAJPDPJQMAIIY-UHFFFAOYSA <=> OUUQCZGPVNCOIJ-UHFFFAOYSA-u2 + VQTUBCCKSQIDNK-UHFFFAOYSA...
+
+CanTherm execution terminated at Wed Aug  2 23:54:19 2017
+Saving kinetics data file /gss_gpfs_scratch/harms.n/QMfiles/OO+[CH2]C(=C)C_C=C(C)C+[O]O.kinetics
+Removing 'core*' files
+Yay, reaction kinetics calculated!!!
+Reaction(label='OO+[CH2]C(=C)C_C=C(C)C+[O]O', reactants=[Species(label="LJXPWUAAAAXJBX-UHFFFAOYSA-u1", conformer=Conformer(E0=(131.628,'kJ/mol'), modes=[IdealGasTranslation(mass=(55.0548,'amu')), NonlinearRotor(inertia=([50.2507,56.8935,104.028],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([67.502,397.934,431.692,472.562,537.368,562.56,778.915,821.812,852.526,954.386,981.776,1037.96,1042.8,1258.61,1359.56,1402.1,1456.66,1466.44,1475.04,1521.4,3003.16,3065.47,3086.18,3093.2,3107.58,3187.7,3201.44],'cm^-1'))], spinMultiplicity=2)), Species(label="MHAJPDPJQMAIIY-UHFFFAOYSA", conformer=Conformer(E0=(-134.382,'kJ/mol'), modes=[IdealGasTranslation(mass=(34.0055,'amu')), NonlinearRotor(inertia=([1.63801,18.4022,19.029],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([378.1,1029.14,1344.99,1458.5,3786.54,3787.27],'cm^-1'))]))], products=[Species(label="OUUQCZGPVNCOIJ-UHFFFAOYSA-u2", conformer=Conformer(E0=(6.19549,'kJ/mol'), modes=[IdealGasTranslation(mass=(32.9977,'amu')), NonlinearRotor(inertia=([0.800947,14.5112,15.3121],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([1245.9,1447.19,3645.15],'cm^-1'))], spinMultiplicity=2)), Species(label="VQTUBCCKSQIDNK-UHFFFAOYSA", conformer=Conformer(E0=(-22.7725,'kJ/mol'), modes=[IdealGasTranslation(mass=(56.0626,'amu')), NonlinearRotor(inertia=([54.9115,59.6566,108.37],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([195.64,239.417,376.414,432.409,437.234,705.775,817.437,939.227,954.775,978.848,1003.84,1070.18,1091.31,1285.58,1388.22,1391.56,1423.3,1456.37,1463.11,1474.61,1480.97,1711.22,2991.48,2995.17,3043.79,3046,3091.12,3092.1,3096.75,3178.78],'cm^-1'))]))], kinetics=Arrhenius(A=(8.48421e-07,'cm^3/(mol*s)'), n=4.87122, Ea=(12.9729,'kJ/mol'), T0=(1,'K'), Tmin=(303.03,'K'), Tmax=(2500,'K'), comment="""Fitted to 59 data points; dA = *|/ 1.9304, dn = +|- 0.086321, dEa = +|- 0.474852 kJ/mol"""), transitionState=TransitionState(label="TS", conformer=Conformer(E0=(38.0629,'kJ/mol'), modes=[IdealGasTranslation(mass=(89.0602,'amu')), NonlinearRotor(inertia=([114.174,237.557,245.28],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([67.4338,94.0251,123.053,210.212,257.668,368.149,391.928,430.3,503.986,529.908,585.104,685.654,843.148,916.492,964.911,992.84,1027.69,1061.01,1071.19,1108.22,1189.52,1309.03,1389.44,1410.62,1415.97,1423.66,1452.85,1467.02,1479.03,1628.63,3005.09,3048.66,3068.23,3095.84,3097.3,3131.97,3185.01,3722.1],'cm^-1'))], spinMultiplicity=2), frequency=(-1884.52,'cm^-1'), tunneling=Eckart(frequency=(-1884.52,'cm^-1'), E0_reac=(-2.7536,'kJ/mol'), E0_TS=(38.0629,'kJ/mol'), E0_prod=(-16.577,'kJ/mol'))))
+For reaction Reaction(label='OO+[CH2]C(=C)C_C=C(C)C+[O]O', reactants=[Species(label="LJXPWUAAAAXJBX-UHFFFAOYSA-u1", conformer=Conformer(E0=(131.628,'kJ/mol'), modes=[IdealGasTranslation(mass=(55.0548,'amu')), NonlinearRotor(inertia=([50.2507,56.8935,104.028],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([67.502,397.934,431.692,472.562,537.368,562.56,778.915,821.812,852.526,954.386,981.776,1037.96,1042.8,1258.61,1359.56,1402.1,1456.66,1466.44,1475.04,1521.4,3003.16,3065.47,3086.18,3093.2,3107.58,3187.7,3201.44],'cm^-1'))], spinMultiplicity=2)), Species(label="MHAJPDPJQMAIIY-UHFFFAOYSA", conformer=Conformer(E0=(-134.382,'kJ/mol'), modes=[IdealGasTranslation(mass=(34.0055,'amu')), NonlinearRotor(inertia=([1.63801,18.4022,19.029],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([378.1,1029.14,1344.99,1458.5,3786.54,3787.27],'cm^-1'))]))], products=[Species(label="OUUQCZGPVNCOIJ-UHFFFAOYSA-u2", conformer=Conformer(E0=(6.19549,'kJ/mol'), modes=[IdealGasTranslation(mass=(32.9977,'amu')), NonlinearRotor(inertia=([0.800947,14.5112,15.3121],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([1245.9,1447.19,3645.15],'cm^-1'))], spinMultiplicity=2)), Species(label="VQTUBCCKSQIDNK-UHFFFAOYSA", conformer=Conformer(E0=(-22.7725,'kJ/mol'), modes=[IdealGasTranslation(mass=(56.0626,'amu')), NonlinearRotor(inertia=([54.9115,59.6566,108.37],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([195.64,239.417,376.414,432.409,437.234,705.775,817.437,939.227,954.775,978.848,1003.84,1070.18,1091.31,1285.58,1388.22,1391.56,1423.3,1456.37,1463.11,1474.61,1480.97,1711.22,2991.48,2995.17,3043.79,3046,3091.12,3092.1,3096.75,3178.78],'cm^-1'))]))], kinetics=Arrhenius(A=(8.48421e-07,'cm^3/(mol*s)'), n=4.87122, Ea=(12.9729,'kJ/mol'), T0=(1,'K'), Tmin=(303.03,'K'), Tmax=(2500,'K'), comment="""Fitted to 59 data points; dA = *|/ 1.9304, dn = +|- 0.086321, dEa = +|- 0.474852 kJ/mol"""), transitionState=TransitionState(label="TS", conformer=Conformer(E0=(38.0629,'kJ/mol'), modes=[IdealGasTranslation(mass=(89.0602,'amu')), NonlinearRotor(inertia=([114.174,237.557,245.28],'amu*angstrom^2'), symmetry=1), HarmonicOscillator(frequencies=([67.4338,94.0251,123.053,210.212,257.668,368.149,391.928,430.3,503.986,529.908,585.104,685.654,843.148,916.492,964.911,992.84,1027.69,1061.01,1071.19,1108.22,1189.52,1309.03,1389.44,1410.62,1415.97,1423.66,1452.85,1467.02,1479.03,1628.63,3005.09,3048.66,3068.23,3095.84,3097.3,3131.97,3185.01,3722.1],'cm^-1'))], spinMultiplicity=2), frequency=(-1884.52,'cm^-1'), tunneling=Eckart(frequency=(-1884.52,'cm^-1'), E0_reac=(-2.7536,'kJ/mol'), E0_TS=(38.0629,'kJ/mol'), E0_prod=(-16.577,'kJ/mol'))))
+We have calculated kinetics Arrhenius(A=(8.48421e-07,'cm^3/(mol*s)'), n=4.87122, Ea=(12.9729,'kJ/mol'), T0=(1,'K'), Tmin=(303.03,'K'), Tmax=(2500,'K'), comment="""Fitted to 59 data points; dA = *|/ 1.9304, dn = +|- 0.086321, dEa = +|- 0.474852 kJ/mol""")

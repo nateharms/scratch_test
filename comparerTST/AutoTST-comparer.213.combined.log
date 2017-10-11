@@ -1,0 +1,59 @@
+comparerTST.py:41 <module> INFO RUNNING WITH JOB NUMBER i = 213
+comparerTST.py:45 <module> INFO Loading RMG Database ...
+comparerTST.py:48 <module> INFO /home/harms.n/Code/RMG-database/input
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from CBS_QB3_1dHR.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from primaryThermoLibrary.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from KlippensteinH2O2.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:774 loadGroups INFO Loading thermodynamics group database from /home/harms.n/Code/RMG-database/input/thermo/groups...
+transport.py:294 loadGroups INFO Loading transport group database from /home/harms.n/Code/RMG-database/input/transport/groups...
+database.py:165 loadFamilies INFO Loading the user-specified kinetics families from /home/harms.n/Code/RMG-database/input/kinetics/families
+statmech.py:526 loadGroups INFO Loading frequencies group database from /home/harms.n/Code/RMG-database/input/statmech/groups...
+comparerTST.py:57 <module> INFO RMG Database Loaded
+comparerTST.py:81 <module> INFO generateReactionsFromFamilies successfuly performed
+comparerTST.py:141 performCalcs INFO chemkinRxn: Reaction(reactants=[Molecule(SMILES="C=CCC"), Molecule(SMILES="[O]O")], products=[Molecule(SMILES="OO"), Molecule(SMILES="C=C[CH]C")], degeneracy=2, pairs=[[Molecule(SMILES="C=CCC"), Molecule(SMILES="C=C[CH]C")], [Molecule(SMILES="[O]O"), Molecule(SMILES="OO")]])
+comparerTST.py:143 performCalcs INFO Ensuring resonance isomers have been generated
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+[Molecule(SMILES="C=CCC"), Molecule(SMILES="[O]O")]
+[Molecule(SMILES="OO"), Molecule(SMILES="C=C[CH]C")]
+comparerTST.py:162 performCalcs INFO Generated one reaction:
+comparerTST.py:163 performCalcs INFO [Reaction(reactants=[Molecule(SMILES="C=CCC"), Molecule(SMILES="[O]O")], products=[Molecule(SMILES="OO"), Molecule(SMILES="C=C[CH]C")], degeneracy=2, pairs=[[Molecule(SMILES="C=CCC"), Molecule(SMILES="C=C[CH]C")], [Molecule(SMILES="[O]O"), Molecule(SMILES="OO")]])]
+comparerTST.py:172 performCalcs INFO The reaction of interest is as follows: 
+comparerTST.py:173 performCalcs INFO <Molecule "C=CCC"> + <Molecule "[O]O"> <=> <Molecule "OO"> + <Molecule "C=C[CH]C">
+comparerTST.py:175 performCalcs INFO asserting that the testReaction is Isomorphic
+comparerTST.py:177 performCalcs INFO reaction: Reaction(reactants=[Molecule(SMILES="C=CCC"), Molecule(SMILES="[O]O")], products=[Molecule(SMILES="OO"), Molecule(SMILES="C=C[CH]C")], degeneracy=2, pairs=[[Molecule(SMILES="C=CCC"), Molecule(SMILES="C=C[CH]C")], [Molecule(SMILES="[O]O"), Molecule(SMILES="OO")]])
+comparerTST.py:183 performCalcs INFO Labeling reactant atoms
+comparerTST.py:193 performCalcs INFO Labeling product atoms
+comparerTST.py:209 performCalcs INFO We have generated a H_Abstraction reaction that matches, and used it to label the atoms.
+comparerTST.py:211 performCalcs INFO Calculating reaction kinetics
+comparerTST.py:119 calculate INFO Calculating reaction rate for <Molecule "C=CCC"> + <Molecule "[O]O"> <=> <Molecule "OO"> + <Molecule "C=C[CH]C">
+comparerTST.py:121 calculate INFO Selecting the appropriate TS distance database for family 'H_Abstraction'
+comparerTST.py:123 calculate INFO Calculating kinetic data by calling qmCalc.getKineticData
+reaction.py:619 loadKineticsData INFO Kinetics results file /gss_gpfs_scratch/harms.n/QMfiles/C=CCC+[O]O_C=C[CH]C+OO.kinetics does not exist or is invalid
+reaction.py:520 generateTSGeometryDirectGuess INFO Generating a TS geometry via the direct guess method
+reaction.py:300 generateBoundsMatrix INFO Generating bounds matrix for C=CCC.[O]O
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.9 to 2.509291
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.545526 to 2.4914
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.65 to 3.37835759416
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.65 to 3.35653283943
+reaction.py:561 generateTSGeometryDirectGuess INFO TS estimate made. About to try the search...
+reaction.py:426 optimizeTS INFO Starting optimization steps of the TS search.
+gaussian.py:702 checkComplete INFO Checking file /gss_gpfs_scratch/harms.n/QMscratch/C=CCC+[O]O_C=C[CH]C+OO.log is complete
+gaussian.py:729 checkComplete INFO IRC file /gss_gpfs_scratch/harms.n/QMscratch/C=CCC+[O]O_C=C[CH]C+OO.log is complete
+reaction.py:437 optimizeTS INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/C=CCC+[O]O_C=C[CH]C+OO.log exists and looks complete. Trying that.
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/C=CCC+[O]O_C=C[CH]C+OO.log
+gaussian.py:702 checkComplete INFO Checking file /gss_gpfs_scratch/harms.n/QMscratch/C=CCC+[O]O_C=C[CH]C+OOIRC.log is complete
+gaussian.py:729 checkComplete INFO IRC file /gss_gpfs_scratch/harms.n/QMscratch/C=CCC+[O]O_C=C[CH]C+OOIRC.log is complete
+gaussian.py:843 verifyIRCOutputFile INFO Verifying the IRC output file /gss_gpfs_scratch/harms.n/QMscratch/C=CCC+[O]O_C=C[CH]C+OOIRC.log
+gaussian.py:878 verifyIRCOutputFile INFO Checking if all the success keywords are found in the file.
+gaussian.py:880 verifyIRCOutputFile ERROR Not all of the required keywords for success were found in the IRC output file!
+gaussian.py:702 checkComplete INFO Checking file /gss_gpfs_scratch/harms.n/QMscratch/C=CCC+[O]O_C=C[CH]C+OOIRC.log is complete
+gaussian.py:729 checkComplete INFO IRC file /gss_gpfs_scratch/harms.n/QMscratch/C=CCC+[O]O_C=C[CH]C+OOIRC.log is complete
+reaction.py:842 generateKineticData WARNING Couldn't find transition state. Not using TST
+comparerTST.py:125 calculate INFO Removing 'core*' files
+comparerTST.py:136 calculate INFO Boo, reaction kinetics not calculated!!!
+comparerTST.py:214 performCalcs INFO For reaction Reaction(reactants=[Molecule(SMILES="C=CCC"), Molecule(SMILES="[O]O")], products=[Molecule(SMILES="OO"), Molecule(SMILES="C=C[CH]C")], degeneracy=2, pairs=[[Molecule(SMILES="C=CCC"), Molecule(SMILES="C=C[CH]C")], [Molecule(SMILES="[O]O"), Molecule(SMILES="OO")]])
+comparerTST.py:219 performCalcs WARNING Couldn't calculate kinetics.

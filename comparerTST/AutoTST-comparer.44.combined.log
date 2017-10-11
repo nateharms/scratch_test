@@ -1,0 +1,151 @@
+comparerTST.py:41 <module> INFO RUNNING WITH JOB NUMBER i = 44
+comparerTST.py:45 <module> INFO Loading RMG Database ...
+comparerTST.py:48 <module> INFO /home/harms.n/Code/RMG-database/input
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from CBS_QB3_1dHR.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from primaryThermoLibrary.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from KlippensteinH2O2.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:774 loadGroups INFO Loading thermodynamics group database from /home/harms.n/Code/RMG-database/input/thermo/groups...
+transport.py:294 loadGroups INFO Loading transport group database from /home/harms.n/Code/RMG-database/input/transport/groups...
+database.py:165 loadFamilies INFO Loading the user-specified kinetics families from /home/harms.n/Code/RMG-database/input/kinetics/families
+statmech.py:526 loadGroups INFO Loading frequencies group database from /home/harms.n/Code/RMG-database/input/statmech/groups...
+comparerTST.py:57 <module> INFO RMG Database Loaded
+comparerTST.py:81 <module> INFO generateReactionsFromFamilies successfuly performed
+comparerTST.py:141 performCalcs INFO chemkinRxn: Reaction(reactants=[Molecule(SMILES="[CH2]O"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH]O")], degeneracy=4, pairs=[[Molecule(SMILES="[CH2]O"), Molecule(SMILES="[CH]O")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+comparerTST.py:143 performCalcs INFO Ensuring resonance isomers have been generated
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+[Molecule(SMILES="[CH2]O"), Molecule(SMILES="[O][O]")]
+[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH]O")]
+comparerTST.py:162 performCalcs INFO Generated one reaction:
+comparerTST.py:163 performCalcs INFO [Reaction(reactants=[Molecule(SMILES="[CH2]O"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH]O")], degeneracy=4, pairs=[[Molecule(SMILES="[CH2]O"), Molecule(SMILES="[CH]O")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])]
+comparerTST.py:172 performCalcs INFO The reaction of interest is as follows: 
+comparerTST.py:173 performCalcs INFO <Molecule "[CH2]O"> + <Molecule "[O][O]"> <=> <Molecule "[O]O"> + <Molecule "[CH]O">
+comparerTST.py:175 performCalcs INFO asserting that the testReaction is Isomorphic
+comparerTST.py:177 performCalcs INFO reaction: Reaction(reactants=[Molecule(SMILES="[CH2]O"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH]O")], degeneracy=4, pairs=[[Molecule(SMILES="[CH2]O"), Molecule(SMILES="[CH]O")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+comparerTST.py:183 performCalcs INFO Labeling reactant atoms
+comparerTST.py:193 performCalcs INFO Labeling product atoms
+comparerTST.py:209 performCalcs INFO We have generated a H_Abstraction reaction that matches, and used it to label the atoms.
+comparerTST.py:211 performCalcs INFO Calculating reaction kinetics
+comparerTST.py:119 calculate INFO Calculating reaction rate for <Molecule "[CH2]O"> + <Molecule "[O][O]"> <=> <Molecule "[O]O"> + <Molecule "[CH]O">
+comparerTST.py:121 calculate INFO Selecting the appropriate TS distance database for family 'H_Abstraction'
+comparerTST.py:123 calculate INFO Calculating kinetic data by calling qmCalc.getKineticData
+reaction.py:619 loadKineticsData INFO Kinetics results file /gss_gpfs_scratch/harms.n/QMfiles/[CH2]O+[O][O]_[CH]O+[O]O.kinetics does not exist or is invalid
+reaction.py:520 generateTSGeometryDirectGuess INFO Generating a TS geometry via the direct guess method
+reaction.py:300 generateBoundsMatrix INFO Generating bounds matrix for [CH2]O.[O][O]
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.502609 to 2.44179
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.4 to 3.20479854181
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.9 to 2.439963
+reaction.py:561 generateTSGeometryDirectGuess INFO TS estimate made. About to try the search...
+reaction.py:426 optimizeTS INFO Starting optimization steps of the TS search.
+gaussian.py:535 optEstimate INFO Running loose optimization of TS with frozen center
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/[CH2]O+[O][O]_[CH]O+[O]OEst.gjf
+gaussian.py:590 optRxnCenter INFO Optimization of TS reaction center distances
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/[CH2]O+[O][O]_[CH]O+[O]ORxnC.gjf
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000009a26, rsp 00007fff78df8bd8, rbp 00007fff78df91b0
+   rsi 000000000000000b, rdi 0000000000009a26, r8  00002b66db0076c0
+   r9  0000000000000000, r10 00007fff78df8960, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff78df91f8
+   r15 0000000000000046
+  --- traceback not available
+gaussian.py:680 runAlt WARNING Gaussian finished with return code 1
+reaction.py:443 optimizeTS INFO Optimizing TS attempt 1
+gaussian.py:485 createInputFile INFO Creating input file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/[CH2]O+[O][O]_[CH]O+[O]O.log
+gaussian.py:516 createIRCFile INFO Creating IRC file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/[CH2]O+[O][O]_[CH]O+[O]OIRC.gjf
+gaussian.py:685 runIRC INFO Running IRC
+gaussian.py:843 verifyIRCOutputFile INFO Verifying the IRC output file /gss_gpfs_scratch/harms.n/QMscratch/[CH2]O+[O][O]_[CH]O+[O]OIRC.log
+gaussian.py:878 verifyIRCOutputFile INFO Checking if all the success keywords are found in the file.
+reaction.py:570 saveTSData INFO Saving TS result file /gss_gpfs_scratch/harms.n/QMfiles/[CH2]O+[O][O]_[CH]O+[O]O.ts
+gaussian.py:991 parse INFO Parsing the gaussian output /gss_gpfs_scratch/harms.n/QMscratch/[CH2]O+[O][O]_[CH]O+[O]O.log
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/CBOIHMRHGLHBPB-UHFFFAOYSA-u1.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/CBOIHMRHGLHBPB-UHFFFAOYSA-u1.symm
+symmetry.py:188 parse INFO Point group: C1
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/MYMOFIZGZYHOMD-UHFFFAOYSA-u1,2.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/MYMOFIZGZYHOMD-UHFFFAOYSA-u1,2.symm
+symmetry.py:188 parse INFO Point group: Dinfh
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/OUUQCZGPVNCOIJ-UHFFFAOYSA-u2.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/OUUQCZGPVNCOIJ-UHFFFAOYSA-u2.symm
+symmetry.py:188 parse INFO Point group: Cs
+gaussian.py:111 verifyOutputFile INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/UUOIGPDTLYBNGY-UHFFFAOYSA-u1,1.log does not exist.
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 1 of 36 on molecule [CH]O.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000009f6a, rsp 00007fffffb289d8, rbp 00007fffffb28fb0
+   rsi 000000000000000b, rdi 0000000000009f6a, r8  00002af1816856c0
+   r9  0000000000000000, r10 00007fffffb28760, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffffb28ff8
+   r15 0000000000000034
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 2 of 36 on molecule [CH]O.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000001d24, rsp 00007fffd49906c8, rbp 00007fffd4990ca0
+   rsi 000000000000000b, rdi 0000000000001d24, r8  00002b41bcf4f6c0
+   r9  0000000000000000, r10 00007fffd4990450, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffd4990ce8
+   r15 0000000000000034
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 3 of 36 on molecule [CH]O.
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/UUOIGPDTLYBNGY-UHFFFAOYSA-u1,1.log
+gaussian.py:278 generateQMData INFO Attempt 3 of 36 on species InChI=1S/CH2O/c1-2/h1-2H/u1,1 succeeded.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/UUOIGPDTLYBNGY-UHFFFAOYSA-u1,1.symm
+symmetry.py:188 parse INFO Point group: C1
+CanTherm execution initiated at Mon Jul 31 14:50:04 2017
+
+###############################################################
+#                                                             #
+#                          CanTherm                           #
+#                                                             #
+#   Version: 0.1.0 (14 May 2009)                              #
+#   Authors: RMG Developers (rmg_dev@mit.edu)                 #
+#   P.I.:    William H. Green (whgreen@mit.edu)               #
+#   Website: http://rmg.sourceforge.net/                      #
+#                                                             #
+###############################################################
+
+Loading species CBOIHMRHGLHBPB-UHFFFAOYSA-u1...
+Loading species MYMOFIZGZYHOMD-UHFFFAOYSA-u1,2...
+Loading species OUUQCZGPVNCOIJ-UHFFFAOYSA-u2...
+Loading species UUOIGPDTLYBNGY-UHFFFAOYSA-u1,1...
+Loading transition state TS...
+Loading reaction [CH2]O+[O][O]_[CH]O+[O]O...
+
+
+Loading statistical mechanics parameters for CBOIHMRHGLHBPB-UHFFFAOYSA-u1...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for CBOIHMRHGLHBPB-UHFFFAOYSA-u1...
+Loading statistical mechanics parameters for MYMOFIZGZYHOMD-UHFFFAOYSA-u1,2...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for MYMOFIZGZYHOMD-UHFFFAOYSA-u1,2...
+Loading statistical mechanics parameters for OUUQCZGPVNCOIJ-UHFFFAOYSA-u2...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for OUUQCZGPVNCOIJ-UHFFFAOYSA-u2...
+Loading statistical mechanics parameters for UUOIGPDTLYBNGY-UHFFFAOYSA-u1,1...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for UUOIGPDTLYBNGY-UHFFFAOYSA-u1,1...
+Loading statistical mechanics parameters for TS...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for TS...
+Generating Arrhenius kinetics model for Arrhenius...
+One or both of the barrier heights of -39.7984 and 201.369 kJ/mol encountered in Eckart method are invalid.
+Removing 'core*' files
+Boo, reaction kinetics not calculated!!!
+For reaction Reaction(reactants=[Molecule(SMILES="[CH2]O"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH]O")], degeneracy=4, pairs=[[Molecule(SMILES="[CH2]O"), Molecule(SMILES="[CH]O")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+Warning: Couldn't calculate kinetics.

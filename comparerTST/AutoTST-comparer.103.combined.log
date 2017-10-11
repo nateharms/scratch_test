@@ -1,0 +1,79 @@
+comparerTST.py:41 <module> INFO RUNNING WITH JOB NUMBER i = 103
+comparerTST.py:45 <module> INFO Loading RMG Database ...
+comparerTST.py:48 <module> INFO /home/harms.n/Code/RMG-database/input
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from CBS_QB3_1dHR.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from primaryThermoLibrary.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from KlippensteinH2O2.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:774 loadGroups INFO Loading thermodynamics group database from /home/harms.n/Code/RMG-database/input/thermo/groups...
+transport.py:294 loadGroups INFO Loading transport group database from /home/harms.n/Code/RMG-database/input/transport/groups...
+database.py:165 loadFamilies INFO Loading the user-specified kinetics families from /home/harms.n/Code/RMG-database/input/kinetics/families
+statmech.py:526 loadGroups INFO Loading frequencies group database from /home/harms.n/Code/RMG-database/input/statmech/groups...
+comparerTST.py:57 <module> INFO RMG Database Loaded
+comparerTST.py:81 <module> INFO generateReactionsFromFamilies successfuly performed
+comparerTST.py:141 performCalcs INFO chemkinRxn: Reaction(reactants=[Molecule(SMILES="CC=O"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH2]C=O")], degeneracy=6, pairs=[[Molecule(SMILES="CC=O"), Molecule(SMILES="[CH2]C=O")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+comparerTST.py:143 performCalcs INFO Ensuring resonance isomers have been generated
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+[Molecule(SMILES="CC=O"), Molecule(SMILES="[O][O]")]
+[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH2]C=O")]
+comparerTST.py:162 performCalcs INFO Generated one reaction:
+comparerTST.py:163 performCalcs INFO [Reaction(reactants=[Molecule(SMILES="CC=O"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH2]C=O")], degeneracy=6, pairs=[[Molecule(SMILES="CC=O"), Molecule(SMILES="[CH2]C=O")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])]
+comparerTST.py:172 performCalcs INFO The reaction of interest is as follows: 
+comparerTST.py:173 performCalcs INFO <Molecule "CC=O"> + <Molecule "[O][O]"> <=> <Molecule "[O]O"> + <Molecule "[CH2]C=O">
+comparerTST.py:175 performCalcs INFO asserting that the testReaction is Isomorphic
+comparerTST.py:177 performCalcs INFO reaction: Reaction(reactants=[Molecule(SMILES="CC=O"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH2]C=O")], degeneracy=6, pairs=[[Molecule(SMILES="CC=O"), Molecule(SMILES="[CH2]C=O")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+comparerTST.py:183 performCalcs INFO Labeling reactant atoms
+comparerTST.py:193 performCalcs INFO Labeling product atoms
+comparerTST.py:209 performCalcs INFO We have generated a H_Abstraction reaction that matches, and used it to label the atoms.
+comparerTST.py:211 performCalcs INFO Calculating reaction kinetics
+comparerTST.py:119 calculate INFO Calculating reaction rate for <Molecule "CC=O"> + <Molecule "[O][O]"> <=> <Molecule "[O]O"> + <Molecule "[CH2]C=O">
+comparerTST.py:121 calculate INFO Selecting the appropriate TS distance database for family 'H_Abstraction'
+comparerTST.py:123 calculate INFO Calculating kinetic data by calling qmCalc.getKineticData
+reaction.py:619 loadKineticsData INFO Kinetics results file /gss_gpfs_scratch/harms.n/QMfiles/CC=O+[O][O]_[CH2]C=O+[O]O.kinetics does not exist or is invalid
+reaction.py:520 generateTSGeometryDirectGuess INFO Generating a TS geometry via the direct guess method
+reaction.py:300 generateBoundsMatrix INFO Generating bounds matrix for CC=O.[O][O]
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.526317 to 2.465001
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.65 to 3.26849483943
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.9 to 2.421253
+reaction.py:561 generateTSGeometryDirectGuess INFO TS estimate made. About to try the search...
+reaction.py:426 optimizeTS INFO Starting optimization steps of the TS search.
+gaussian.py:535 optEstimate INFO Running loose optimization of TS with frozen center
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]OEst.gjf
+gaussian.py:590 optRxnCenter INFO Optimization of TS reaction center distances
+gaussian.py:596 optRxnCenter INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]ORxnC.log exists.
+gaussian.py:702 checkComplete INFO Checking file /gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]ORxnC.log is complete
+gaussian.py:729 checkComplete INFO IRC file /gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]ORxnC.log is complete
+gaussian.py:598 optRxnCenter INFO Existing output file looks complete, so using it instead of re-running.
+reaction.py:443 optimizeTS INFO Optimizing TS attempt 1
+gaussian.py:485 createInputFile INFO Creating input file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]O.log
+gaussian.py:516 createIRCFile INFO Creating IRC file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]OIRC.gjf
+gaussian.py:685 runIRC INFO Running IRC
+gaussian.py:843 verifyIRCOutputFile INFO Verifying the IRC output file /gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]OIRC.log
+gaussian.py:845 verifyIRCOutputFile INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]OIRC.log does not exist.
+gaussian.py:702 checkComplete INFO Checking file /gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]OIRC.log is complete
+Traceback (most recent call last):
+  File "/home/harms.n/Code/OOHabstraction/ComparerTST/comparerTST.py", line 304, in <module>
+    performCalcs(rxn)
+  File "/home/harms.n/Code/OOHabstraction/ComparerTST/comparerTST.py", line 212, in performCalcs
+    reaction = calculate(reaction)
+  File "/home/harms.n/Code/OOHabstraction/ComparerTST/comparerTST.py", line 124, in calculate
+    reaction = qmCalc.getKineticData(reaction, tsDatabase)
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/main.py", line 251, in getKineticData
+    reaction = qm_reaction_calculator.generateKineticData()
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 838, in generateKineticData
+    tsFound = self.generateTSGeometryDirectGuess()
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 562, in generateTSGeometryDirectGuess
+    check =  self.tsSearch(labels)
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 506, in tsSearch
+    validTS = self.validateTS()
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 489, in validateTS
+    complete, convergenceFailure = self.checkComplete(self.ircOutputFilePath)
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/gaussian.py", line 706, in checkComplete
+    f = open(filePath, 'r')
+IOError: [Errno 2] No such file or directory: '/gss_gpfs_scratch/harms.n/QMscratch/CC=O+[O][O]_[CH2]C=O+[O]OIRC.log'

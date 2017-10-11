@@ -1,0 +1,90 @@
+comparerTST.py:41 <module> INFO RUNNING WITH JOB NUMBER i = 18
+comparerTST.py:45 <module> INFO Loading RMG Database ...
+comparerTST.py:48 <module> INFO /home/harms.n/Code/RMG-database/input
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from CBS_QB3_1dHR.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from primaryThermoLibrary.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from KlippensteinH2O2.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:774 loadGroups INFO Loading thermodynamics group database from /home/harms.n/Code/RMG-database/input/thermo/groups...
+transport.py:294 loadGroups INFO Loading transport group database from /home/harms.n/Code/RMG-database/input/transport/groups...
+database.py:165 loadFamilies INFO Loading the user-specified kinetics families from /home/harms.n/Code/RMG-database/input/kinetics/families
+statmech.py:526 loadGroups INFO Loading frequencies group database from /home/harms.n/Code/RMG-database/input/statmech/groups...
+comparerTST.py:57 <module> INFO RMG Database Loaded
+comparerTST.py:81 <module> INFO generateReactionsFromFamilies successfuly performed
+comparerTST.py:141 performCalcs INFO chemkinRxn: Reaction(reactants=[Molecule(SMILES="C#C"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[C]#C")], degeneracy=4, pairs=[[Molecule(SMILES="C#C"), Molecule(SMILES="[C]#C")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+comparerTST.py:143 performCalcs INFO Ensuring resonance isomers have been generated
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+[Molecule(SMILES="C#C"), Molecule(SMILES="[O][O]")]
+[Molecule(SMILES="[O]O"), Molecule(SMILES="[C]#C")]
+comparerTST.py:162 performCalcs INFO Generated one reaction:
+comparerTST.py:163 performCalcs INFO [Reaction(reactants=[Molecule(SMILES="C#C"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[C]#C")], degeneracy=4, pairs=[[Molecule(SMILES="C#C"), Molecule(SMILES="[C]#C")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])]
+comparerTST.py:172 performCalcs INFO The reaction of interest is as follows: 
+comparerTST.py:173 performCalcs INFO <Molecule "C#C"> + <Molecule "[O][O]"> <=> <Molecule "[O]O"> + <Molecule "[C]#C">
+comparerTST.py:175 performCalcs INFO asserting that the testReaction is Isomorphic
+comparerTST.py:177 performCalcs INFO reaction: Reaction(reactants=[Molecule(SMILES="C#C"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[C]#C")], degeneracy=4, pairs=[[Molecule(SMILES="C#C"), Molecule(SMILES="[C]#C")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+comparerTST.py:183 performCalcs INFO Labeling reactant atoms
+comparerTST.py:193 performCalcs INFO Labeling product atoms
+comparerTST.py:209 performCalcs INFO We have generated a H_Abstraction reaction that matches, and used it to label the atoms.
+comparerTST.py:211 performCalcs INFO Calculating reaction kinetics
+comparerTST.py:119 calculate INFO Calculating reaction rate for <Molecule "C#C"> + <Molecule "[O][O]"> <=> <Molecule "[O]O"> + <Molecule "[C]#C">
+comparerTST.py:121 calculate INFO Selecting the appropriate TS distance database for family 'H_Abstraction'
+comparerTST.py:123 calculate INFO Calculating kinetic data by calling qmCalc.getKineticData
+reaction.py:619 loadKineticsData INFO Kinetics results file /gss_gpfs_scratch/harms.n/QMfiles/C#C+[O][O]_[C]#C+[O]O.kinetics does not exist or is invalid
+reaction.py:520 generateTSGeometryDirectGuess INFO Generating a TS geometry via the direct guess method
+reaction.py:300 generateBoundsMatrix INFO Generating bounds matrix for C#C.[O][O]
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.22380768291 to 2.18380768291
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.682234 to 2.675437
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.65 to 3.18217368291
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.9 to 2.204366
+molecule.py:140 rd_embed INFO RDKit failed to embed on attempt 1 of 45
+molecule.py:140 rd_embed INFO RDKit failed to embed on attempt 2 of 45
+molecule.py:140 rd_embed INFO RDKit failed to embed on attempt 3 of 45
+molecule.py:140 rd_embed INFO RDKit failed to embed on attempt 4 of 45
+reaction.py:561 generateTSGeometryDirectGuess INFO TS estimate made. About to try the search...
+reaction.py:426 optimizeTS INFO Starting optimization steps of the TS search.
+gaussian.py:535 optEstimate INFO Running loose optimization of TS with frozen center
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/C#C+[O][O]_[C]#C+[O]OEst.gjf
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000a0db, rsp 00007fff6a8ac7a8, rbp 00007fff6a8acd80
+   rsi 000000000000000b, rdi 000000000000a0db, r8  00002b9248de96c0
+   r9  0000000000000000, r10 00007fff6a8ac530, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff6a8acdc8
+   r15 00002b9248deb050
+  --- traceback not available
+gaussian.py:680 runAlt WARNING Gaussian finished with return code 1
+gaussian.py:590 optRxnCenter INFO Optimization of TS reaction center distances
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/C#C+[O][O]_[C]#C+[O]ORxnC.gjf
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000bb4c, rsp 00007fff0d0de698, rbp 00007fff0d0dec70
+   rsi 000000000000000b, rdi 000000000000bb4c, r8  00002b07f6c6a6c0
+   r9  0000000000000000, r10 00007fff0d0de420, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff0d0decb8
+   r15 00002b07f6c6c050
+  --- traceback not available
+gaussian.py:680 runAlt WARNING Gaussian finished with return code 1
+reaction.py:443 optimizeTS INFO Optimizing TS attempt 1
+gaussian.py:485 createInputFile INFO Creating input file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000001d12, rsp 00007fffd47fa018, rbp 00007fffd47fa5f0
+   rsi 000000000000000b, rdi 0000000000001d12, r8  00002b7b094be6c0
+   r9  0000000000000000, r10 00007fffd47f9da0, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffd47fa638
+   r15 00002b7b094c0050
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/C#C+[O][O]_[C]#C+[O]O.log
+gaussian.py:763 verifyOutputFile ERROR Gaussian output file contains the following error: Error termination
+gaussian.py:702 checkComplete INFO Checking file /gss_gpfs_scratch/harms.n/QMscratch/C#C+[O][O]_[C]#C+[O]O.log is complete
+gaussian.py:729 checkComplete INFO IRC file /gss_gpfs_scratch/harms.n/QMscratch/C#C+[O][O]_[C]#C+[O]O.log is complete
+reaction.py:842 generateKineticData WARNING Couldn't find transition state. Not using TST
+comparerTST.py:125 calculate INFO Removing 'core*' files
+comparerTST.py:136 calculate INFO Boo, reaction kinetics not calculated!!!
+comparerTST.py:214 performCalcs INFO For reaction Reaction(reactants=[Molecule(SMILES="C#C"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[C]#C")], degeneracy=4, pairs=[[Molecule(SMILES="C#C"), Molecule(SMILES="[C]#C")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+comparerTST.py:219 performCalcs WARNING Couldn't calculate kinetics.

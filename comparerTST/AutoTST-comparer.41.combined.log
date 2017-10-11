@@ -1,0 +1,121 @@
+comparerTST.py:41 <module> INFO RUNNING WITH JOB NUMBER i = 41
+comparerTST.py:45 <module> INFO Loading RMG Database ...
+comparerTST.py:48 <module> INFO /home/harms.n/Code/RMG-database/input
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from CBS_QB3_1dHR.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from primaryThermoLibrary.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from KlippensteinH2O2.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:774 loadGroups INFO Loading thermodynamics group database from /home/harms.n/Code/RMG-database/input/thermo/groups...
+transport.py:294 loadGroups INFO Loading transport group database from /home/harms.n/Code/RMG-database/input/transport/groups...
+database.py:165 loadFamilies INFO Loading the user-specified kinetics families from /home/harms.n/Code/RMG-database/input/kinetics/families
+statmech.py:526 loadGroups INFO Loading frequencies group database from /home/harms.n/Code/RMG-database/input/statmech/groups...
+comparerTST.py:57 <module> INFO RMG Database Loaded
+comparerTST.py:81 <module> INFO generateReactionsFromFamilies successfuly performed
+comparerTST.py:141 performCalcs INFO chemkinRxn: Reaction(reactants=[Molecule(SMILES="C[CH2]"), Molecule(SMILES="[O]O")], products=[Molecule(SMILES="OO"), Molecule(SMILES="[CH]C")], degeneracy=2, pairs=[[Molecule(SMILES="C[CH2]"), Molecule(SMILES="[CH]C")], [Molecule(SMILES="[O]O"), Molecule(SMILES="OO")]])
+comparerTST.py:143 performCalcs INFO Ensuring resonance isomers have been generated
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+[Molecule(SMILES="C[CH2]"), Molecule(SMILES="[O]O")]
+[Molecule(SMILES="OO"), Molecule(SMILES="[CH]C")]
+comparerTST.py:162 performCalcs INFO Generated one reaction:
+comparerTST.py:163 performCalcs INFO [Reaction(reactants=[Molecule(SMILES="C[CH2]"), Molecule(SMILES="[O]O")], products=[Molecule(SMILES="OO"), Molecule(SMILES="[CH]C")], degeneracy=2, pairs=[[Molecule(SMILES="C[CH2]"), Molecule(SMILES="[CH]C")], [Molecule(SMILES="[O]O"), Molecule(SMILES="OO")]])]
+comparerTST.py:172 performCalcs INFO The reaction of interest is as follows: 
+comparerTST.py:173 performCalcs INFO <Molecule "C[CH2]"> + <Molecule "[O]O"> <=> <Molecule "OO"> + <Molecule "[CH]C">
+comparerTST.py:175 performCalcs INFO asserting that the testReaction is Isomorphic
+comparerTST.py:177 performCalcs INFO reaction: Reaction(reactants=[Molecule(SMILES="C[CH2]"), Molecule(SMILES="[O]O")], products=[Molecule(SMILES="OO"), Molecule(SMILES="[CH]C")], degeneracy=2, pairs=[[Molecule(SMILES="C[CH2]"), Molecule(SMILES="[CH]C")], [Molecule(SMILES="[O]O"), Molecule(SMILES="OO")]])
+comparerTST.py:183 performCalcs INFO Labeling reactant atoms
+comparerTST.py:193 performCalcs INFO Labeling product atoms
+comparerTST.py:209 performCalcs INFO We have generated a H_Abstraction reaction that matches, and used it to label the atoms.
+comparerTST.py:211 performCalcs INFO Calculating reaction kinetics
+comparerTST.py:119 calculate INFO Calculating reaction rate for <Molecule "C[CH2]"> + <Molecule "[O]O"> <=> <Molecule "OO"> + <Molecule "[CH]C">
+comparerTST.py:121 calculate INFO Selecting the appropriate TS distance database for family 'H_Abstraction'
+comparerTST.py:123 calculate INFO Calculating kinetic data by calling qmCalc.getKineticData
+reaction.py:619 loadKineticsData INFO Kinetics results file /gss_gpfs_scratch/harms.n/QMfiles/C[CH2]+[O]O_OO+[CH]C.kinetics does not exist or is invalid
+reaction.py:520 generateTSGeometryDirectGuess INFO Generating a TS geometry via the direct guess method
+reaction.py:300 generateBoundsMatrix INFO Generating bounds matrix for [CH2]C.[O]O
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.9 to 2.439963
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.65 to 3.30902959416
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.502609 to 2.44179
+reaction.py:561 generateTSGeometryDirectGuess INFO TS estimate made. About to try the search...
+reaction.py:426 optimizeTS INFO Starting optimization steps of the TS search.
+gaussian.py:535 optEstimate INFO Running loose optimization of TS with frozen center
+gaussian.py:541 optEstimate INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]CEst.log exists.
+gaussian.py:702 checkComplete INFO Checking file /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]CEst.log is complete
+gaussian.py:729 checkComplete INFO IRC file /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]CEst.log is complete
+gaussian.py:543 optEstimate INFO Existing output file looks complete, so using it instead of re-running.
+gaussian.py:590 optRxnCenter INFO Optimization of TS reaction center distances
+gaussian.py:596 optRxnCenter INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]CRxnC.log exists.
+gaussian.py:702 checkComplete INFO Checking file /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]CRxnC.log is complete
+gaussian.py:729 checkComplete INFO IRC file /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]CRxnC.log is complete
+gaussian.py:598 optRxnCenter INFO Existing output file looks complete, so using it instead of re-running.
+reaction.py:443 optimizeTS INFO Optimizing TS attempt 1
+gaussian.py:485 createInputFile INFO Creating input file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]C.log
+gaussian.py:516 createIRCFile INFO Creating IRC file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]CIRC.gjf
+gaussian.py:685 runIRC INFO Running IRC
+gaussian.py:843 verifyIRCOutputFile INFO Verifying the IRC output file /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]CIRC.log
+gaussian.py:878 verifyIRCOutputFile INFO Checking if all the success keywords are found in the file.
+reaction.py:570 saveTSData INFO Saving TS result file /gss_gpfs_scratch/harms.n/QMfiles/C[CH2]+[O]O_OO+[CH]C.ts
+gaussian.py:991 parse INFO Parsing the gaussian output /gss_gpfs_scratch/harms.n/QMscratch/C[CH2]+[O]O_OO+[CH]C.log
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/QUPDWYMUPZLYJZ-UHFFFAOYSA-u1.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/QUPDWYMUPZLYJZ-UHFFFAOYSA-u1.symm
+symmetry.py:188 parse INFO Point group: Cs
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/OUUQCZGPVNCOIJ-UHFFFAOYSA-u2.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/OUUQCZGPVNCOIJ-UHFFFAOYSA-u2.symm
+symmetry.py:188 parse INFO Point group: Cs
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/MHAJPDPJQMAIIY-UHFFFAOYSA.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/MHAJPDPJQMAIIY-UHFFFAOYSA.symm
+symmetry.py:188 parse INFO Point group: C2
+gaussian.py:111 verifyOutputFile INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/UUFQTNFCRMXOAE-UHFFFAOYSA-u1,1.log does not exist.
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 1 of 36 on molecule [CH]C.
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/UUFQTNFCRMXOAE-UHFFFAOYSA-u1,1.log
+gaussian.py:278 generateQMData INFO Attempt 1 of 36 on species InChI=1S/C2H4/c1-2/h1H,2H3/u1,1 succeeded.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/UUFQTNFCRMXOAE-UHFFFAOYSA-u1,1.symm
+symmetry.py:188 parse INFO Point group: Cs
+CanTherm execution initiated at Mon Jul 31 14:03:23 2017
+
+###############################################################
+#                                                             #
+#                          CanTherm                           #
+#                                                             #
+#   Version: 0.1.0 (14 May 2009)                              #
+#   Authors: RMG Developers (rmg_dev@mit.edu)                 #
+#   P.I.:    William H. Green (whgreen@mit.edu)               #
+#   Website: http://rmg.sourceforge.net/                      #
+#                                                             #
+###############################################################
+
+Loading species QUPDWYMUPZLYJZ-UHFFFAOYSA-u1...
+Loading species OUUQCZGPVNCOIJ-UHFFFAOYSA-u2...
+Loading species MHAJPDPJQMAIIY-UHFFFAOYSA...
+Loading species UUFQTNFCRMXOAE-UHFFFAOYSA-u1,1...
+Loading transition state TS...
+Loading reaction C[CH2]+[O]O_OO+[CH]C...
+
+
+Loading statistical mechanics parameters for QUPDWYMUPZLYJZ-UHFFFAOYSA-u1...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for QUPDWYMUPZLYJZ-UHFFFAOYSA-u1...
+Loading statistical mechanics parameters for OUUQCZGPVNCOIJ-UHFFFAOYSA-u2...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for OUUQCZGPVNCOIJ-UHFFFAOYSA-u2...
+Loading statistical mechanics parameters for MHAJPDPJQMAIIY-UHFFFAOYSA...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for MHAJPDPJQMAIIY-UHFFFAOYSA...
+Loading statistical mechanics parameters for UUFQTNFCRMXOAE-UHFFFAOYSA-u1,1...
+Warning: No bond energy correction found for model chemistry: M062X/MG3S
+Saving statistical mechanics parameters for UUFQTNFCRMXOAE-UHFFFAOYSA-u1,1...
+Loading statistical mechanics parameters for TS...
+could not convert string to float: =
+Removing 'core*' files
+Boo, reaction kinetics not calculated!!!
+For reaction Reaction(reactants=[Molecule(SMILES="C[CH2]"), Molecule(SMILES="[O]O")], products=[Molecule(SMILES="OO"), Molecule(SMILES="[CH]C")], degeneracy=2, pairs=[[Molecule(SMILES="C[CH2]"), Molecule(SMILES="[CH]C")], [Molecule(SMILES="[O]O"), Molecule(SMILES="OO")]])
+Warning: Couldn't calculate kinetics.

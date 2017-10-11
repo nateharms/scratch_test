@@ -1,0 +1,121 @@
+comparerTST.py:41 <module> INFO RUNNING WITH JOB NUMBER i = 165
+comparerTST.py:45 <module> INFO Loading RMG Database ...
+comparerTST.py:48 <module> INFO /home/harms.n/Code/RMG-database/input
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from CBS_QB3_1dHR.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from primaryThermoLibrary.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from KlippensteinH2O2.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:774 loadGroups INFO Loading thermodynamics group database from /home/harms.n/Code/RMG-database/input/thermo/groups...
+transport.py:294 loadGroups INFO Loading transport group database from /home/harms.n/Code/RMG-database/input/transport/groups...
+database.py:165 loadFamilies INFO Loading the user-specified kinetics families from /home/harms.n/Code/RMG-database/input/kinetics/families
+statmech.py:526 loadGroups INFO Loading frequencies group database from /home/harms.n/Code/RMG-database/input/statmech/groups...
+comparerTST.py:57 <module> INFO RMG Database Loaded
+comparerTST.py:81 <module> INFO generateReactionsFromFamilies successfuly performed
+comparerTST.py:141 performCalcs INFO chemkinRxn: Reaction(reactants=[Molecule(SMILES="C=CC=C"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="C=[C]C=C")], degeneracy=4, pairs=[[Molecule(SMILES="C=CC=C"), Molecule(SMILES="C=[C]C=C")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+comparerTST.py:143 performCalcs INFO Ensuring resonance isomers have been generated
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+[Molecule(SMILES="C=CC=C"), Molecule(SMILES="[O][O]")]
+[Molecule(SMILES="[O]O"), Molecule(SMILES="C=[C]C=C")]
+comparerTST.py:162 performCalcs INFO Generated one reaction:
+comparerTST.py:163 performCalcs INFO [Reaction(reactants=[Molecule(SMILES="C=CC=C"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="C=[C]C=C")], degeneracy=4, pairs=[[Molecule(SMILES="C=CC=C"), Molecule(SMILES="C=[C]C=C")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])]
+comparerTST.py:172 performCalcs INFO The reaction of interest is as follows: 
+comparerTST.py:173 performCalcs INFO <Molecule "C=CC=C"> + <Molecule "[O][O]"> <=> <Molecule "[O]O"> + <Molecule "C=[C]C=C">
+comparerTST.py:175 performCalcs INFO asserting that the testReaction is Isomorphic
+comparerTST.py:177 performCalcs INFO reaction: Reaction(reactants=[Molecule(SMILES="C=CC=C"), Molecule(SMILES="[O][O]")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="C=[C]C=C")], degeneracy=4, pairs=[[Molecule(SMILES="C=CC=C"), Molecule(SMILES="C=[C]C=C")], [Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")]])
+comparerTST.py:183 performCalcs INFO Labeling reactant atoms
+comparerTST.py:193 performCalcs INFO Labeling product atoms
+comparerTST.py:209 performCalcs INFO We have generated a H_Abstraction reaction that matches, and used it to label the atoms.
+comparerTST.py:211 performCalcs INFO Calculating reaction kinetics
+comparerTST.py:119 calculate INFO Calculating reaction rate for <Molecule "C=CC=C"> + <Molecule "[O][O]"> <=> <Molecule "[O]O"> + <Molecule "C=[C]C=C">
+comparerTST.py:121 calculate INFO Selecting the appropriate TS distance database for family 'H_Abstraction'
+comparerTST.py:123 calculate INFO Calculating kinetic data by calling qmCalc.getKineticData
+reaction.py:619 loadKineticsData INFO Kinetics results file /gss_gpfs_scratch/harms.n/QMfiles/C=CC=C+[O][O]_C=[C]C=C+[O]O.kinetics does not exist or is invalid
+reaction.py:520 generateTSGeometryDirectGuess INFO Generating a TS geometry via the direct guess method
+reaction.py:300 generateBoundsMatrix INFO Generating bounds matrix for C=CC=C.[O][O]
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.519224 to 2.458776
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.65 to 3.26405835706
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.65 to 3.14294537707
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.9 to 2.342812
+reaction.py:561 generateTSGeometryDirectGuess INFO TS estimate made. About to try the search...
+reaction.py:426 optimizeTS INFO Starting optimization steps of the TS search.
+gaussian.py:535 optEstimate INFO Running loose optimization of TS with frozen center
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/C=CC=C+[O][O]_C=[C]C=C+[O]OEst.gjf
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000000d75, rsp 00007fffcf9673b8, rbp 00007fffcf967990
+   rsi 000000000000000b, rdi 0000000000000d75, r8  00002b6b3ad476c0
+   r9  0000000000000000, r10 00007fffcf967140, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffcf9679d8
+   r15 0000000000000064
+  --- traceback not available
+gaussian.py:680 runAlt WARNING Gaussian finished with return code 1
+gaussian.py:590 optRxnCenter INFO Optimization of TS reaction center distances
+gaussian.py:596 optRxnCenter INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/C=CC=C+[O][O]_C=[C]C=C+[O]ORxnC.log exists.
+gaussian.py:702 checkComplete INFO Checking file /gss_gpfs_scratch/harms.n/QMscratch/C=CC=C+[O][O]_C=[C]C=C+[O]ORxnC.log is complete
+gaussian.py:729 checkComplete INFO IRC file /gss_gpfs_scratch/harms.n/QMscratch/C=CC=C+[O][O]_C=[C]C=C+[O]ORxnC.log is complete
+gaussian.py:598 optRxnCenter INFO Existing output file looks complete, so using it instead of re-running.
+reaction.py:443 optimizeTS INFO Optimizing TS attempt 1
+gaussian.py:485 createInputFile INFO Creating input file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000792d, rsp 00007fffcc73c238, rbp 00007fffcc73c810
+   rsi 000000000000000b, rdi 000000000000792d, r8  00002b4c6c4fb6c0
+   r9  0000000000000000, r10 00007fffcc73bfc0, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffcc73c858
+   r15 00002b4c6d08d530
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/C=CC=C+[O][O]_C=[C]C=C+[O]O.log
+gaussian.py:763 verifyOutputFile ERROR Gaussian output file contains the following error: Error in internal coordinate system.
+gaussian.py:763 verifyOutputFile ERROR Gaussian output file contains the following error: Error termination
+reaction.py:452 optimizeTS INFO Optimizing TS attempt 2
+gaussian.py:485 createInputFile INFO Creating input file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 00000000000096ab, rsp 00007fff8babc548, rbp 00007fff8babcb20
+   rsi 000000000000000b, rdi 00000000000096ab, r8  00002b09f177e6c0
+   r9  0000000000000000, r10 00007fff8babc2d0, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff8babcb68
+   r15 0000000000000064
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/C=CC=C+[O][O]_C=[C]C=C+[O]O.log
+gaussian.py:763 verifyOutputFile ERROR Gaussian output file contains the following error: Error termination
+gaussian.py:763 verifyOutputFile ERROR Gaussian output file contains the following error: Error termination
+gaussian.py:763 verifyOutputFile ERROR Gaussian output file contains the following error: Error termination
+gaussian.py:763 verifyOutputFile ERROR Gaussian output file contains the following error: Error termination
+gaussian.py:516 createIRCFile INFO Creating IRC file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/C=CC=C+[O][O]_C=[C]C=C+[O]OIRC.gjf
+gaussian.py:685 runIRC INFO Running IRC
+gaussian.py:843 verifyIRCOutputFile INFO Verifying the IRC output file /gss_gpfs_scratch/harms.n/QMscratch/C=CC=C+[O][O]_C=[C]C=C+[O]OIRC.log
+gaussian.py:878 verifyIRCOutputFile INFO Checking if all the success keywords are found in the file.
+reaction.py:570 saveTSData INFO Saving TS result file /gss_gpfs_scratch/harms.n/QMfiles/C=CC=C+[O][O]_C=[C]C=C+[O]O.ts
+gaussian.py:991 parse INFO Parsing the gaussian output /gss_gpfs_scratch/harms.n/QMscratch/C=CC=C+[O][O]_C=[C]C=C+[O]O.log
+qmdata.py:71 parseCCLibData ERROR The passed in cclibData has these attributes: ['aonames', 'aooverlaps', 'atombasis', 'atomcharges', 'atomcoords', 'atommasses', 'atomnos', 'atomspins', 'ccenergies', 'charge', 'coreelectrons', 'enthalpy', 'entropy', 'etenergies', 'etoscs', 'etrotats', 'etsecs', 'etsyms', 'fonames', 'fooverlaps', 'fragnames', 'frags', 'freeenergy', 'gbasis', 'geotargets', 'geovalues', 'grads', 'hessian', 'homos', 'mocoeffs', 'moenergies', 'molmass', 'moments', 'mosyms', 'mpenergies', 'mult', 'natom', 'nbasis', 'nmo', 'nocoeffs', 'optdone', 'rotcons', 'rotsymm', 'scancoords', 'scanenergies', 'scannames', 'scanparm', 'scfenergies', 'scftargets', 'scfvalues', 'temperature', 'vibanharms', 'vibdisps', 'vibfreqs', 'vibirs', 'vibramans', 'vibsyms']
+Traceback (most recent call last):
+  File "/home/harms.n/Code/OOHabstraction/ComparerTST/comparerTST.py", line 304, in <module>
+    performCalcs(rxn)
+  File "/home/harms.n/Code/OOHabstraction/ComparerTST/comparerTST.py", line 212, in performCalcs
+    reaction = calculate(reaction)
+  File "/home/harms.n/Code/OOHabstraction/ComparerTST/comparerTST.py", line 124, in calculate
+    reaction = qmCalc.getKineticData(reaction, tsDatabase)
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/main.py", line 251, in getKineticData
+    reaction = qm_reaction_calculator.generateKineticData()
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 838, in generateKineticData
+    tsFound = self.generateTSGeometryDirectGuess()
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 562, in generateTSGeometryDirectGuess
+    check =  self.tsSearch(labels)
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 509, in tsSearch
+    self.saveTSData()
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 574, in saveTSData
+    resultFile.write("qmData = {0!r}\n".format(self.parse()))
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/gaussian.py", line 1003, in parse
+    self.qmData = parseCCLibData(cclibData, radicalNumber+1)
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/qmdata.py", line 72, in parseCCLibData
+    raise e
+AttributeError: 'ccData_optdone_bool' object has no attribute 'molmass'

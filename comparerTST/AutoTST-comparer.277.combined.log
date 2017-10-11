@@ -1,0 +1,428 @@
+comparerTST.py:41 <module> INFO RUNNING WITH JOB NUMBER i = 277
+comparerTST.py:45 <module> INFO Loading RMG Database ...
+comparerTST.py:48 <module> INFO /home/harms.n/Code/RMG-database/input
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from CBS_QB3_1dHR.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from primaryThermoLibrary.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from KlippensteinH2O2.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:774 loadGroups INFO Loading thermodynamics group database from /home/harms.n/Code/RMG-database/input/thermo/groups...
+transport.py:294 loadGroups INFO Loading transport group database from /home/harms.n/Code/RMG-database/input/transport/groups...
+database.py:165 loadFamilies INFO Loading the user-specified kinetics families from /home/harms.n/Code/RMG-database/input/kinetics/families
+statmech.py:526 loadGroups INFO Loading frequencies group database from /home/harms.n/Code/RMG-database/input/statmech/groups...
+comparerTST.py:57 <module> INFO RMG Database Loaded
+comparerTST.py:81 <module> INFO generateReactionsFromFamilies successfuly performed
+comparerTST.py:141 performCalcs INFO chemkinRxn: Reaction(reactants=[Molecule(SMILES="[O]O"), Molecule(SMILES="O=COO")], products=[Molecule(SMILES="OO"), Molecule(SMILES="O=[C]OO")], pairs=[[Molecule(SMILES="[O]O"), Molecule(SMILES="OO")], [Molecule(SMILES="O=COO"), Molecule(SMILES="O=[C]OO")]])
+comparerTST.py:143 performCalcs INFO Ensuring resonance isomers have been generated
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+[Molecule(SMILES="[O]O"), Molecule(SMILES="O=COO")]
+[Molecule(SMILES="OO"), Molecule(SMILES="O=[C]OO")]
+comparerTST.py:162 performCalcs INFO Generated one reaction:
+comparerTST.py:163 performCalcs INFO [Reaction(reactants=[Molecule(SMILES="[O]O"), Molecule(SMILES="O=COO")], products=[Molecule(SMILES="OO"), Molecule(SMILES="O=[C]OO")], pairs=[[Molecule(SMILES="[O]O"), Molecule(SMILES="OO")], [Molecule(SMILES="O=COO"), Molecule(SMILES="O=[C]OO")]])]
+comparerTST.py:172 performCalcs INFO The reaction of interest is as follows: 
+comparerTST.py:173 performCalcs INFO <Molecule "[O]O"> + <Molecule "O=COO"> <=> <Molecule "OO"> + <Molecule "O=[C]OO">
+comparerTST.py:175 performCalcs INFO asserting that the testReaction is Isomorphic
+comparerTST.py:177 performCalcs INFO reaction: Reaction(reactants=[Molecule(SMILES="[O]O"), Molecule(SMILES="O=COO")], products=[Molecule(SMILES="OO"), Molecule(SMILES="O=[C]OO")], pairs=[[Molecule(SMILES="[O]O"), Molecule(SMILES="OO")], [Molecule(SMILES="O=COO"), Molecule(SMILES="O=[C]OO")]])
+comparerTST.py:183 performCalcs INFO Labeling reactant atoms
+comparerTST.py:193 performCalcs INFO Labeling product atoms
+comparerTST.py:209 performCalcs INFO We have generated a H_Abstraction reaction that matches, and used it to label the atoms.
+comparerTST.py:211 performCalcs INFO Calculating reaction kinetics
+comparerTST.py:119 calculate INFO Calculating reaction rate for <Molecule "[O]O"> + <Molecule "O=COO"> <=> <Molecule "OO"> + <Molecule "O=[C]OO">
+comparerTST.py:121 calculate INFO Selecting the appropriate TS distance database for family 'H_Abstraction'
+comparerTST.py:123 calculate INFO Calculating kinetic data by calling qmCalc.getKineticData
+reaction.py:619 loadKineticsData INFO Kinetics results file /gss_gpfs_scratch/harms.n/QMfiles/O=COO+[O]O_O=[C]OO+OO.kinetics does not exist or is invalid
+reaction.py:520 generateTSGeometryDirectGuess INFO Generating a TS geometry via the direct guess method
+reaction.py:300 generateBoundsMatrix INFO Generating bounds matrix for O=COO.[O]O
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.530122 to 2.474443
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.4 to 3.28010335887
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.4 to 3.16387669621
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.9 to 2.422004
+reaction.py:561 generateTSGeometryDirectGuess INFO TS estimate made. About to try the search...
+reaction.py:426 optimizeTS INFO Starting optimization steps of the TS search.
+gaussian.py:535 optEstimate INFO Running loose optimization of TS with frozen center
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/O=COO+[O]O_O=[C]OO+OOEst.gjf
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000003140, rsp 00007fff958c79e8, rbp 00007fff958c7fc0
+   rsi 000000000000000b, rdi 0000000000003140, r8  00002b45c01446c0
+   r9  0000000000000000, r10 00007fff958c7770, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff958c8008
+   r15 0000000000000052
+  --- traceback not available
+gaussian.py:680 runAlt WARNING Gaussian finished with return code 1
+gaussian.py:590 optRxnCenter INFO Optimization of TS reaction center distances
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/O=COO+[O]O_O=[C]OO+OORxnC.gjf
+reaction.py:443 optimizeTS INFO Optimizing TS attempt 1
+gaussian.py:485 createInputFile INFO Creating input file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/O=COO+[O]O_O=[C]OO+OO.log
+gaussian.py:516 createIRCFile INFO Creating IRC file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/O=COO+[O]O_O=[C]OO+OOIRC.gjf
+gaussian.py:685 runIRC INFO Running IRC
+gaussian.py:843 verifyIRCOutputFile INFO Verifying the IRC output file /gss_gpfs_scratch/harms.n/QMscratch/O=COO+[O]O_O=[C]OO+OOIRC.log
+gaussian.py:878 verifyIRCOutputFile INFO Checking if all the success keywords are found in the file.
+reaction.py:570 saveTSData INFO Saving TS result file /gss_gpfs_scratch/harms.n/QMfiles/O=COO+[O]O_O=[C]OO+OO.ts
+gaussian.py:991 parse INFO Parsing the gaussian output /gss_gpfs_scratch/harms.n/QMscratch/O=COO+[O]O_O=[C]OO+OO.log
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/OUUQCZGPVNCOIJ-UHFFFAOYSA-u2.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/OUUQCZGPVNCOIJ-UHFFFAOYSA-u2.symm
+symmetry.py:188 parse INFO Point group: Cs
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/SCKXCAADGDQQCS-UHFFFAOYSA.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/SCKXCAADGDQQCS-UHFFFAOYSA.symm
+symmetry.py:188 parse INFO Point group: Cs
+gaussian.py:168 verifyOutputFile INFO Successful GaussianMolM062X quantum result in /gss_gpfs_scratch/harms.n/QMscratch/MHAJPDPJQMAIIY-UHFFFAOYSA.log
+gaussian.py:268 generateQMData INFO Found a successful output file; using that.
+symmetry.py:221 writeInputFile INFO Symmetry input file written to /gss_gpfs_scratch/harms.n/QMscratch/MHAJPDPJQMAIIY-UHFFFAOYSA.symm
+symmetry.py:188 parse INFO Point group: C2
+gaussian.py:111 verifyOutputFile INFO Output file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log does not exist.
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 1 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 00000000000049b3, rsp 00007fff529589a8, rbp 00007fff52958f80
+   rsi 000000000000000b, rdi 00000000000049b3, r8  00002b54fc5216c0
+   r9  0000000000000000, r10 00007fff52958730, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff52958fc8
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 2 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 00000000000064ff, rsp 00007fff6b7e8bb8, rbp 00007fff6b7e9190
+   rsi 000000000000000b, rdi 00000000000064ff, r8  00002b7322c776c0
+   r9  0000000000000000, r10 00007fff6b7e8940, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff6b7e91d8
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 3 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 4 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 5 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000358d, rsp 00007ffffe0f7a98, rbp 00007ffffe0f8070
+   rsi 000000000000000b, rdi 000000000000358d, r8  00002b28fd3fd6c0
+   r9  0000000000000000, r10 00007ffffe0f7820, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007ffffe0f80b8
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 6 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000323e, rsp 00007fff5a403678, rbp 00007fff5a403c50
+   rsi 000000000000000b, rdi 000000000000323e, r8  00002b9fdee576c0
+   r9  0000000000000000, r10 00007fff5a403400, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff5a403c98
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 7 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 8 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000001bc3, rsp 00007fffcfe60a48, rbp 00007fffcfe61020
+   rsi 000000000000000b, rdi 0000000000001bc3, r8  00002aada5b056c0
+   r9  0000000000000000, r10 00007fffcfe607d0, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffcfe61068
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 9 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000007638, rsp 00007fff066fb168, rbp 00007fff066fb740
+   rsi 000000000000000b, rdi 0000000000007638, r8  00002ae62f3266c0
+   r9  0000000000000000, r10 00007fff066faef0, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff066fb788
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 10 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 11 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000003f22, rsp 00007fff7c2b5d78, rbp 00007fff7c2b6350
+   rsi 000000000000000b, rdi 0000000000003f22, r8  00002abade1916c0
+   r9  0000000000000000, r10 00007fff7c2b5b00, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff7c2b6398
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 12 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000007fcd, rsp 00007fff964a8248, rbp 00007fff964a8820
+   rsi 000000000000000b, rdi 0000000000007fcd, r8  00002b25083996c0
+   r9  0000000000000000, r10 00007fff964a7fd0, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff964a8868
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 13 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000008f57, rsp 00007fff603eba08, rbp 00007fff603ebfe0
+   rsi 000000000000000b, rdi 0000000000008f57, r8  00002b628b1ad6c0
+   r9  0000000000000000, r10 00007fff603eb790, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff603ec028
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 14 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000009575, rsp 00007fff070c6438, rbp 00007fff070c6a10
+   rsi 000000000000000b, rdi 0000000000009575, r8  00002b1af88316c0
+   r9  0000000000000000, r10 00007fff070c61c0, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff070c6a58
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 15 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000007deb, rsp 00007fffe5995538, rbp 00007fffe5995b10
+   rsi 000000000000000b, rdi 0000000000007deb, r8  00002ad691aff6c0
+   r9  0000000000000000, r10 00007fffe59952c0, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffe5995b58
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 16 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 17 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000000f7d, rsp 00007fff5f8c5588, rbp 00007fff5f8c5b60
+   rsi 000000000000000b, rdi 0000000000000f7d, r8  00002b61011e46c0
+   r9  0000000000000000, r10 00007fff5f8c5310, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff5f8c5ba8
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 18 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000008076, rsp 00007ffff0f9ff78, rbp 00007ffff0fa0550
+   rsi 000000000000000b, rdi 0000000000008076, r8  00002b77227326c0
+   r9  0000000000000000, r10 00007ffff0f9fd00, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007ffff0fa0598
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 19 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 00000000000060b1, rsp 00007fffa4805728, rbp 00007fffa4805d00
+   rsi 000000000000000b, rdi 00000000000060b1, r8  00002ace2984e6c0
+   r9  0000000000000000, r10 00007fffa48054b0, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffa4805d48
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 20 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000003f08, rsp 00007fff17083968, rbp 00007fff17083f40
+   rsi 000000000000000b, rdi 0000000000003f08, r8  00002b513c6926c0
+   r9  0000000000000000, r10 00007fff170836f0, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff17083f88
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 21 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000235a, rsp 00007fffe1e50cf8, rbp 00007fffe1e512d0
+   rsi 000000000000000b, rdi 000000000000235a, r8  00002b4ee1f776c0
+   r9  0000000000000000, r10 00007fffe1e50a80, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffe1e51318
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 22 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000006c0c, rsp 00007fff303edcd8, rbp 00007fff303ee2b0
+   rsi 000000000000000b, rdi 0000000000006c0c, r8  00002b4465a006c0
+   r9  0000000000000000, r10 00007fff303eda60, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff303ee2f8
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 23 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000b39e, rsp 00007fffcbcd3f08, rbp 00007fffcbcd44e0
+   rsi 000000000000000b, rdi 000000000000b39e, r8  00002afd804266c0
+   r9  0000000000000000, r10 00007fffcbcd3c90, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffcbcd4528
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 24 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000008df5, rsp 00007ffff5d0f6b8, rbp 00007ffff5d0fc90
+   rsi 000000000000000b, rdi 0000000000008df5, r8  00002b919e6836c0
+   r9  0000000000000000, r10 00007ffff5d0f440, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007ffff5d0fcd8
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 25 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 26 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000008644, rsp 00007fff36a76a88, rbp 00007fff36a77060
+   rsi 000000000000000b, rdi 0000000000008644, r8  00002aaf659636c0
+   r9  0000000000000000, r10 00007fff36a76810, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff36a770a8
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 27 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000007295, rsp 00007fffd6793bf8, rbp 00007fffd67941d0
+   rsi 000000000000000b, rdi 0000000000007295, r8  00002b6897dd36c0
+   r9  0000000000000000, r10 00007fffd6793980, r11 0000000000000202
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffd6794218
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 28 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 29 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000b048, rsp 00007fff68bebf48, rbp 00007fff68bec520
+   rsi 000000000000000b, rdi 000000000000b048, r8  00002b63877226c0
+   r9  0000000000000000, r10 00007fff68bebcd0, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff68bec568
+   r15 0000000001308278
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 30 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000008906, rsp 00007fffb9a54828, rbp 00007fffb9a54e00
+   rsi 000000000000000b, rdi 0000000000008906, r8  00002b287959b6c0
+   r9  0000000000000000, r10 00007fffb9a545b0, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffb9a54e48
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 31 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 32 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 33 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000691b, rsp 00007fff21f4dcb8, rbp 00007fff21f4e290
+   rsi 000000000000000b, rdi 000000000000691b, r8  00002b23eeed96c0
+   r9  0000000000000000, r10 00007fff21f4da40, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fff21f4e2d8
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 34 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 35 of 36 on molecule O=[C]OO.
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 00000000000044cc, rsp 00007ffff4b3d948, rbp 00007ffff4b3df20
+   rsi 000000000000000b, rdi 00000000000044cc, r8  00002aeb7e2076c0
+   r9  0000000000000000, r10 00007ffff4b3d6d0, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007ffff4b3df68
+   r15 000000000000003a
+  --- traceback not available
+gaussian.py:89 run WARNING Gaussian finished with return code 1
+gaussian.py:148 verifyOutputFile ERROR Not all of the required keywords for success were found in the output file!
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:275 generateQMData INFO Trying GaussianMolM062X attempt 36 of 36 on molecule O=[C]OO.
+gaussian.py:165 verifyOutputFile INFO Incorrect connectivity for optimized geometry in file /gss_gpfs_scratch/harms.n/QMscratch/PCHWFRYSQGPDFR-UHFFFAOYSA-u1.log
+gaussian.py:282 generateQMData ERROR QM thermo calculation failed for InChI=1S/CHO3/c2-1-4-3/h3H/u1.
+Traceback (most recent call last):
+  File "/home/harms.n/Code/OOHabstraction/ComparerTST/comparerTST.py", line 304, in <module>
+    performCalcs(rxn)
+  File "/home/harms.n/Code/OOHabstraction/ComparerTST/comparerTST.py", line 212, in performCalcs
+    reaction = calculate(reaction)
+  File "/home/harms.n/Code/OOHabstraction/ComparerTST/comparerTST.py", line 124, in calculate
+    reaction = qmCalc.getKineticData(reaction, tsDatabase)
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/main.py", line 251, in getKineticData
+    reaction = qm_reaction_calculator.generateKineticData()
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 846, in generateKineticData
+    products = self.calculateQMData(self.reaction.products)
+  File "/home/harms.n/Code/RMG-Py/rmgpy/qm/reaction.py", line 824, in calculateQMData
+    raise Exception('The reactant or product geometry did not optimize. Cannot calculate the kinetics.')
+Exception: The reactant or product geometry did not optimize. Cannot calculate the kinetics.

@@ -1,0 +1,62 @@
+comparerTST.py:41 <module> INFO RUNNING WITH JOB NUMBER i = 391
+comparerTST.py:45 <module> INFO Loading RMG Database ...
+comparerTST.py:48 <module> INFO /home/harms.n/Code/RMG-database/input
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from thermo_DFT_CCSDTF12_BAC.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from CBS_QB3_1dHR.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from primaryThermoLibrary.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:760 loadLibraries INFO Loading thermodynamics library from KlippensteinH2O2.py in /home/harms.n/Code/RMG-database/input/thermo/libraries...
+thermo.py:774 loadGroups INFO Loading thermodynamics group database from /home/harms.n/Code/RMG-database/input/thermo/groups...
+transport.py:294 loadGroups INFO Loading transport group database from /home/harms.n/Code/RMG-database/input/transport/groups...
+database.py:165 loadFamilies INFO Loading the user-specified kinetics families from /home/harms.n/Code/RMG-database/input/kinetics/families
+statmech.py:526 loadGroups INFO Loading frequencies group database from /home/harms.n/Code/RMG-database/input/statmech/groups...
+comparerTST.py:57 <module> INFO RMG Database Loaded
+comparerTST.py:81 <module> INFO generateReactionsFromFamilies successfuly performed
+comparerTST.py:141 performCalcs INFO chemkinRxn: Reaction(reactants=[Molecule(SMILES="[O][O]"), Molecule(SMILES="[CH2]C(C)OO")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH2]C([CH2])OO")], degeneracy=6, pairs=[[Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")], [Molecule(SMILES="[CH2]C(C)OO"), Molecule(SMILES="[CH2]C([CH2])OO")]])
+comparerTST.py:143 performCalcs INFO Ensuring resonance isomers have been generated
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+<type 'rmgpy.molecule.molecule.Molecule'>
+[Molecule(SMILES="[O][O]"), Molecule(SMILES="[CH2]C(C)OO")]
+[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH2]C([CH2])OO")]
+comparerTST.py:162 performCalcs INFO Generated one reaction:
+comparerTST.py:163 performCalcs INFO [Reaction(reactants=[Molecule(SMILES="[O][O]"), Molecule(SMILES="[CH2]C(C)OO")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH2]C([CH2])OO")], degeneracy=6, pairs=[[Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")], [Molecule(SMILES="[CH2]C(C)OO"), Molecule(SMILES="[CH2]C([CH2])OO")]])]
+comparerTST.py:172 performCalcs INFO The reaction of interest is as follows: 
+comparerTST.py:173 performCalcs INFO <Molecule "[O][O]"> + <Molecule "[CH2]C(C)OO"> <=> <Molecule "[O]O"> + <Molecule "[CH2]C([CH2])OO">
+comparerTST.py:175 performCalcs INFO asserting that the testReaction is Isomorphic
+comparerTST.py:177 performCalcs INFO reaction: Reaction(reactants=[Molecule(SMILES="[O][O]"), Molecule(SMILES="[CH2]C(C)OO")], products=[Molecule(SMILES="[O]O"), Molecule(SMILES="[CH2]C([CH2])OO")], degeneracy=6, pairs=[[Molecule(SMILES="[O][O]"), Molecule(SMILES="[O]O")], [Molecule(SMILES="[CH2]C(C)OO"), Molecule(SMILES="[CH2]C([CH2])OO")]])
+comparerTST.py:183 performCalcs INFO Labeling reactant atoms
+comparerTST.py:193 performCalcs INFO Labeling product atoms
+comparerTST.py:209 performCalcs INFO We have generated a H_Abstraction reaction that matches, and used it to label the atoms.
+comparerTST.py:211 performCalcs INFO Calculating reaction kinetics
+comparerTST.py:119 calculate INFO Calculating reaction rate for <Molecule "[O][O]"> + <Molecule "[CH2]C(C)OO"> <=> <Molecule "[O]O"> + <Molecule "[CH2]C([CH2])OO">
+comparerTST.py:121 calculate INFO Selecting the appropriate TS distance database for family 'H_Abstraction'
+comparerTST.py:123 calculate INFO Calculating kinetic data by calling qmCalc.getKineticData
+reaction.py:619 loadKineticsData INFO Kinetics results file /gss_gpfs_scratch/harms.n/QMfiles/[CH2]C(C)OO+[O][O]_[CH2]C([CH2])OO+[O]O.kinetics does not exist or is invalid
+reaction.py:520 generateTSGeometryDirectGuess INFO Generating a TS geometry via the direct guess method
+reaction.py:300 generateBoundsMatrix INFO Generating bounds matrix for [CH2]C(C)OO.[O][O]
+reaction.py:338 bmPreEdit INFO Changing lower limit 3.65 to 3.26214059416
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.520343 to 2.457475
+reaction.py:338 bmPreEdit INFO Changing lower limit 2.9 to 2.393074
+reaction.py:561 generateTSGeometryDirectGuess INFO TS estimate made. About to try the search...
+reaction.py:426 optimizeTS INFO Starting optimization steps of the TS search.
+gaussian.py:535 optEstimate INFO Running loose optimization of TS with frozen center
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/[CH2]C(C)OO+[O][O]_[CH2]C([CH2])OO+[O]OEst.gjf
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000004567, rsp 00007fffd0fa1f48, rbp 00007fffd0fa2520
+   rsi 000000000000000b, rdi 0000000000004567, r8  00002abc2e66f6c0
+   r9  0000000000000000, r10 00007fffd0fa1cd0, r11 0000000000000206
+   r12 0000000000000000, r13 0000000000000000, r14 00007fffd0fa2568
+   r15 0000000000000000
+  --- traceback not available
+gaussian.py:680 runAlt WARNING Gaussian finished with return code 1
+gaussian.py:590 optRxnCenter INFO Optimization of TS reaction center distances
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/[CH2]C(C)OO+[O][O]_[CH2]C([CH2])OO+[O]ORxnC.gjf
+reaction.py:443 optimizeTS INFO Optimizing TS attempt 1
+gaussian.py:485 createInputFile INFO Creating input file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file None
+gaussian.py:748 verifyOutputFile INFO Verifying output file /gss_gpfs_scratch/harms.n/QMscratch/[CH2]C(C)OO+[O][O]_[CH2]C([CH2])OO+[O]O.log
+gaussian.py:516 createIRCFile INFO Creating IRC file
+gaussian.py:189 writeInputFile INFO Writing gaussian input file /gss_gpfs_scratch/harms.n/QMscratch/[CH2]C(C)OO+[O][O]_[CH2]C([CH2])OO+[O]OIRC.gjf
+gaussian.py:685 runIRC INFO Running IRC
