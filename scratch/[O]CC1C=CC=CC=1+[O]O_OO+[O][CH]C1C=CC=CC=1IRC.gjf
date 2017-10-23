@@ -1,0 +1,8 @@
+%nprocshared=20
+%mem=5GB
+%chk=/gss_gpfs_scratch/harms.n/QMscratch/[O]CC1C=CC=CC=1+[O]O_OO+[O][CH]C1C=CC=CC=1
+# m062x/6-311+g(2df,2p) irc=(calcall,report=read) geom=allcheck guess=check nosymm
+
+0   3
+
+

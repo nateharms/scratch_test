@@ -1,0 +1,14 @@
+%nprocshared=20
+%mem=5GB
+%chk=/gss_gpfs_scratch/harms.n/QMscratch/[OH]+[O]O_O+[O][O]
+# m062x/6-311+g(2df,2p) opt=(ts,calcfc,noeigentest) freq
+
+[OH]+[O]O_O+[O][O]
+
+0   3
+O        -0.671630   0.581771   0.049604
+O        -1.398693  -0.475592  -0.032756
+H         0.303965   0.418002  -0.053614
+O         1.797337  -0.090588  -0.104262
+H         1.879932  -0.542734   0.752928
+
